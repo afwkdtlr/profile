@@ -2,6 +2,8 @@
 
 프론트엔드(React + Vite)와 백엔드(Spring Boot)를 분리한 프로필 웹입니다.
 
+로컬 수정, 서버 배포, 장애 확인은 `docs/OPERATIONS.md` 에 정리해 두었습니다. 운영 주소는 https://pjs94dev.com/profile/ 입니다.
+
 - 프론트: `frontend` — http://localhost:5173
 - 백엔드: `backend` — http://localhost:8080
 - 프로필 API: `GET /api/profile`

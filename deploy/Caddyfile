@@ -1,0 +1,22 @@
+{
+	email admin@pjs94dev.com
+}
+
+pjs94dev.com {
+	encode gzip
+	redir /portfolio /profile/ permanent
+	redir /portfolio/ /profile/ permanent
+	handle /profile/api/* {
+		uri strip_prefix /profile
+		reverse_proxy 127.0.0.1:8080
+	}
+	handle /profile* {
+		uri strip_prefix /profile
+		root * /opt/profile/frontend
+		try_files {path} /index.html
+		file_server
+	}
+	handle {
+		reverse_proxy 127.0.0.1:4000
+	}
+}

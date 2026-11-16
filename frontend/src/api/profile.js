@@ -6,7 +6,7 @@ import { fallbackProfile } from "../data/fallbackProfile"
  */
 export async function loadProfile() {
   try {
-    const response = await fetch("/api/profile")
+    const response = await fetch(`${import.meta.env.BASE_URL}api/profile`)
     if (!response.ok) {
       throw new Error(`프로필 API 응답 오류: ${response.status}`)
     }
