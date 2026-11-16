@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans KR", "Segoe UI", sans-serif;
+  --color-paper: #f4f1ea;
+  --color-ink: #1c1917;
+  --color-muted: #57534e;
+  --color-line: #e7e0d6;
+  --color-accent: #c2410c;
+  --color-card: #fffcf7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: #fed7aa;
+}
